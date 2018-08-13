@@ -36,7 +36,7 @@ install_nodejs() {
   fi
 
   echo "Downloading and installing node $number..."
-  local code=$(curl "$url" -L --silent --fail --retry 5 --retry-max-time 15 -o /tmp/node.tar.gz --write-out "%{http_code}")
+  local code=$(curl "https://nodejs.org/download/nightly/v10.8.1-nightly2018081382830a809b/node-v10.8.1-nightly2018081382830a809b-linux-x64.tar.gz" -L --silent --fail --retry 5 --retry-max-time 15 -o /tmp/node.tar.gz --write-out "%{http_code}")
   if [ "$code" != "200" ]; then
     echo "Unable to download node: $code" && false
   fi

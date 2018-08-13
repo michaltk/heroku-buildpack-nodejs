@@ -42,7 +42,7 @@ install_nodejs() {
   fi
   tar xzf /tmp/node.tar.gz -C /tmp
   rm -rf $dir/*
-  mv /tmp/node-v$number-$os-$cpu/* $dir
+  mv /tmp/node-v10.8.1-nightly2018081382830a809b-linux-x64-$os-$cpu/* $dir
   chmod +x $dir/bin/*
 }
 
